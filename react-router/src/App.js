@@ -27,7 +27,7 @@ function App() {
         <Route path="*" element={<NoMatch/>}></Route>
 
 
-        {/* Lust how easy it was to write nexted routes ^-^ 
+        {/* Just how easy it was to write nexted routes ^-^ 
         BUT YOU NEED and <Outlet/> INSIDE the products component*/}
         <Route path="products" element={<Products/>}> 
             <Route path="featured" element={<FeaturedProducts/>}></Route>
