@@ -32,6 +32,19 @@ function App() {
         <Route path="products" element={<Products/>}> 
             <Route path="featured" element={<FeaturedProducts/>}></Route>
             <Route path="new" element={<NewProducts/>}> </Route>
+
+            {/* addtionally when you have nested routes and you want one of those nested route 
+            to be rendered WITH THE PARENT URL, we then use an index route
+            
+            in other words both:
+            http://localhost:3000/products
+            http://localhost:3000/products/featured
+            will show the same thing
+
+            */}
+            <Route index element={<FeaturedProducts/>}/>
+
+            
         </Route>
         
      
