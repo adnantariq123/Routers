@@ -1,0 +1,3 @@
+export const NoMatch=()=>{
+    return (<h3> Page not found </h3>)
+}

@@ -4,6 +4,9 @@ export const Home=()=>{
     const Navigate = useNavigate()
     return(
     <div>Home
-        <button onClick={()=>Navigate("order-summary")}>Place Order</button>
+        {/* what does  {replace:true})} do???
+        If you need to replace the current location instead of push a new one onto the history stack, use navigate(to, { replace: true }). If you need state, use navigate(to, { state }).
+        */}
+        <button onClick={()=>Navigate("order-summary", {replace:true})}>Place Order</button>
     </div>)
 }
