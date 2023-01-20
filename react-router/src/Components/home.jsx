@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
 
 export const Home=()=>{
-    return(<div>Home</div>)
+    const Navigate = useNavigate()
+    return(
+    <div>Home
+        <button onClick={()=>Navigate("order-summary")}>Place Order</button>
+    </div>)
 }
