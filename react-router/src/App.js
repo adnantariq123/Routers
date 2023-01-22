@@ -1,6 +1,7 @@
+import React from 'react';
 
 import { Home } from './Components/home';
-import { About } from './Components/about';
+// import { About } from './Components/about'; turning it off for lazy laoding demo
 import {Routes, Route} from "react-router-dom";
 import { NavBar } from './Components/NavBar';
 import { OrderSummary } from './Components/orderSummary';
@@ -15,6 +16,12 @@ import {NewProducts} from "./Components/NewProducts";
 import { Users } from './Components/Users';
 import {UserDetail} from "./Components/UserDetails"
 
+
+//************ LAZY LOADING ********************* */
+const LazyAbout = React.lazy(()=>import("./Components/about"))
+
+
+
 function App() {
   return (
     <>
@@ -24,7 +31,21 @@ function App() {
     <Routes>
 
         <Route path="/" element={<Home />}></Route>
-        <Route path="about" element={<About />}></Route>
+
+
+
+        {/* <Route path="about" element={<About />}></Route>  TURNED OFF for lazy loading
+        for lazy loading we require a React.SUSPENSE with a fallback. This fall back 
+        could have been simple text of a component*/}
+        
+        <Route path="about" element={
+          <React.Suspense fallback={<NoMatch/>}>
+            <LazyAbout />
+          </React.Suspense>}>
+        </Route>
+        {/* Lazy loading ends here */}
+
+
         <Route path="order-summary" element={<OrderSummary/>}/>
 
         {/* when you dont have a proper link , you cathc that using the wild card * in path */}

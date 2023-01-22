@@ -27,11 +27,12 @@ export const Users=()=>{
         <button onClick={()=>{setsearchParams({filter:'active'})}}>Active User</button>
         <button onClick={()=>{setsearchParams({})}}>Reset Filter</button>
 
+
         {
             showActiveUsers? (
                 <h4> Showing Active users?</h4>
             ): (
-                <h4> OR.. not showing Active users?</h4>
+                <h4> (default).. showing Active users?</h4>
             )
 
         }
