@@ -7,9 +7,13 @@ import { OrderSummary } from './Components/orderSummary';
 import {NoMatch} from "./Components/NoLink"
 import { Products } from './Components/Products';
 
-//used for nexted routes
+//used for nexted routes AND index routing
 import {FeaturedProducts} from "./Components/FeaturedProducts";
 import {NewProducts} from "./Components/NewProducts";
+
+//used for dynamic routes
+import { Users } from './Components/Users';
+import {UserDetail} from "./Components/UserDetails"
 
 function App() {
   return (
@@ -43,8 +47,13 @@ function App() {
 
             */}
             <Route index element={<FeaturedProducts/>}/>
+        </Route>
 
-            
+        {/* Dynamic Routing */}
+        <Route path="users" element={<Users />}>
+          <Route path=":userDetail" element={<UserDetail/>}/>
+
+
         </Route>
         
      
