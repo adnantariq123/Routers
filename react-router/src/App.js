@@ -18,6 +18,8 @@ import {UserDetail} from "./Components/UserDetails"
 
 
 //************ LAZY LOADING ********************* */
+// instead of laoding like we normally did 
+// we do a React.lazy which take an arrow funtion with the import
 const LazyAbout = React.lazy(()=>import("./Components/about"))
 
 
@@ -35,6 +37,7 @@ function App() {
 
 
         {/* <Route path="about" element={<About />}></Route>  TURNED OFF for lazy loading
+
         for lazy loading we require a React.SUSPENSE with a fallback. This fall back 
         could have been simple text of a component*/}
         
@@ -43,7 +46,7 @@ function App() {
             <LazyAbout />
           </React.Suspense>}>
         </Route>
-        {/* Lazy loading ends here */}
+        {/* Lazy loading ends here  PRETTY COOL STUFF*/}
 
 
         <Route path="order-summary" element={<OrderSummary/>}/>
