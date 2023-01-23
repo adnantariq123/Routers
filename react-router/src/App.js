@@ -17,10 +17,25 @@ import { Users } from './Components/Users';
 import {UserDetail} from "./Components/UserDetails"
 
 
+
+// HOOKS
+import {StateUser} from './Hooks/StateUse';
+
+
+
+
+
 //************ LAZY LOADING ********************* */
 // instead of laoding like we normally did 
 // we do a React.lazy which take an arrow funtion with the import
+
 const LazyAbout = React.lazy(()=>import("./Components/about"))
+
+
+//IMPORTANT ALL imports have to be above the const variable  ¯\_(ツ)_/¯
+// will cause an error -  so we define the import above
+//import {StateUser} from './Hooks/StateUse';
+
 
 
 
@@ -79,6 +94,8 @@ function App() {
 
 
         </Route>
+
+        <Route path="hooks" element={<StateUser/>}/>
         
      
    
