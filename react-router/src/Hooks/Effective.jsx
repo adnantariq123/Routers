@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useLayoutEffect } from "react"
 import axios from "axios";
 
 export const Effective =()=>{
@@ -13,9 +13,14 @@ export const Effective =()=>{
             })
     },[])
 
+    // this is called BEFORE the useEffect ()
+    useLayoutEffect(()=>{
+        console.log("Notice value of axiosData (state) was null, BECAUSE it runs BEFORE the useEffect was fired : "+axiosData)
+    }, [])
+
     return(
         <>
-        <h3> use Effect</h3>
+        <h3> use Effect added useLayoutEffect() </h3>
         <table>
             <tbody>
             {axiosData?.map((data)=>{
