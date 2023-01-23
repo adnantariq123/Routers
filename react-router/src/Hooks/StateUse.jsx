@@ -12,11 +12,17 @@ export const StateUser=()=>{
         //setTxt(myRef.current.value)
     }
 
+    // this is a better exmaple of useRef
+    const focusInput=()=>{
+        myRef.current.focus()
+    }
+
     return (
     <>
         <h3> Use State with text input change AND useRef</h3>
         <input onChange={textChanger} ref={myRef}></input>
         <p>{txt}</p>
+        <button onClick={focusInput}> Click btn to focus input (myRef)</button>
     </>
     )
 
