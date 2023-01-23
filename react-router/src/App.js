@@ -22,6 +22,7 @@ import {UserDetail} from "./Components/UserDetails"
 import { Defaulted } from './Hooks/DefaultDrop';
 import {StateUser} from './Hooks/StateUse';
 import { Reduction } from './Hooks/Reduction';
+import { Effective } from './Hooks/Effective';
 
 
 
@@ -60,7 +61,7 @@ function App() {
         
         <Route path="about" element={
           <React.Suspense fallback={<NoMatch/>}>
-            <LazyAbout />
+            <LazyAbout namer="whatever text"/>
           </React.Suspense>}>
         </Route>
         {/* Lazy loading ends here  PRETTY COOL STUFF*/}
@@ -100,6 +101,7 @@ function App() {
         <Route path="hooks" element={<Defaulted/>}>
           <Route path="useState" element={<StateUser/>}/>
           <Route path="useReducer" element={<Reduction/>}/>
+          <Route path="useEffect" element={<Effective/>}/>
         </Route>
         
         
