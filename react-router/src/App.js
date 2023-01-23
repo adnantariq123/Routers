@@ -19,7 +19,9 @@ import {UserDetail} from "./Components/UserDetails"
 
 
 // HOOKS
+import { Defaulted } from './Hooks/DefaultDrop';
 import {StateUser} from './Hooks/StateUse';
+import { Reduction } from './Hooks/Reduction';
 
 
 
@@ -95,7 +97,11 @@ function App() {
 
         </Route>
 
-        <Route path="hooks" element={<StateUser/>}/>
+        <Route path="hooks" element={<Defaulted/>}>
+          <Route path="useState" element={<StateUser/>}/>
+          <Route path="useReducer" element={<Reduction/>}/>
+        </Route>
+        
         
      
    
