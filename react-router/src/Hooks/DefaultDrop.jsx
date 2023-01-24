@@ -25,6 +25,7 @@ export const Defaulted=()=>{
         <NavLink to="useReducer">Use Reducer</NavLink>
         <NavLink to="useEffect">Use Effect</NavLink>
         <NavLink to="useContext">Use Context</NavLink>
+        <NavLink to="useMemo">Use Memo</NavLink>
 
         <JsonContext.Provider value={jsonPlaceHolderContext}>
         <Outlet/>

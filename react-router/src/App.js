@@ -23,6 +23,7 @@ import { Defaulted } from './Hooks/DefaultDrop';
 import {StateUser} from './Hooks/StateUse';
 import { Reduction } from './Hooks/Reduction';
 import { Effective } from './Hooks/Effective';
+import { MemoTutorial } from './Hooks/Memod';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -113,6 +114,8 @@ function App() {
                 <LazyContext />
             </React.Suspense>
           }/>
+
+          <Route path="useMemo" element={<MemoTutorial/>}/>
 
         </Route>
         

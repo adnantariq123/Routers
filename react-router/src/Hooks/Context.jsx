@@ -7,8 +7,16 @@ export const Context=()=>{
 
     return (
         <>
-        <p>use context</p>
+        <br/><br/>
         <table>
+            <thead>
+                <tr> 
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>body</th>
+                </tr>
+            </thead>
             <tbody>
                 {JsonData?.map((x)=>{
                     return <tr key={x.id}> 
