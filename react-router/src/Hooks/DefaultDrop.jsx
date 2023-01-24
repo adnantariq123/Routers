@@ -2,6 +2,10 @@ import { Outlet,NavLink } from "react-router-dom"
 import { createContext , useEffect, useState } from "react"
 import axios from "axios";
 
+//dont forget to keep the createContext() part OUTSIDE the component, ALSO it needs a export
+export const JsonContext = createContext ()
+
+
 export const Defaulted=()=>{
     const [jsonPlaceHolderContext, setJsonPlaceHolderContext] = useState(null)
 
@@ -12,7 +16,7 @@ export const Defaulted=()=>{
         })
     },[])
 
-    const JsonContext = createContext ()
+    
 
     return (
         <nav>
