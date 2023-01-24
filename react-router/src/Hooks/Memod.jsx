@@ -50,6 +50,8 @@ export const MemoTutorial =()=>{
         <button onClick={()=>setFakeName("Frank")}>Frank</button>
         <button onClick={()=>setFakeName("Hawkeye")}>Hawkeye</button>
         <button onClick={()=>setFakeName("Rador")}>Rador</button>
+
+        <p>useMemo is used to call a function only when it's dependency has changed othetwise that function  would keep firing EVERYTIME ANY STATE CHANGED... WHICH IS WRONG</p>
         </>
     )
 }

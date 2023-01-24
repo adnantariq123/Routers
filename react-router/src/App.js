@@ -24,6 +24,7 @@ import {StateUser} from './Hooks/StateUse';
 import { Reduction } from './Hooks/Reduction';
 import { Effective } from './Hooks/Effective';
 import { MemoTutorial } from './Hooks/Memod';
+import { DoubleAGrid } from './Hooks/AgGrid';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -116,6 +117,7 @@ function App() {
           }/>
 
           <Route path="useMemo" element={<MemoTutorial/>}/>
+          <Route path="agGrid" element={<DoubleAGrid/>}/>
 
         </Route>
         
