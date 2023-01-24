@@ -24,6 +24,9 @@ import {StateUser} from './Hooks/StateUse';
 import { Reduction } from './Hooks/Reduction';
 import { Effective } from './Hooks/Effective';
 
+// But we are too darn lazy ^,^
+//import { Context } from './Hooks/Context';
+
 
 
 
@@ -31,8 +34,9 @@ import { Effective } from './Hooks/Effective';
 //************ LAZY LOADING ********************* */
 // instead of laoding like we normally did 
 // we do a React.lazy which take an arrow funtion with the import
-
-const LazyAbout = React.lazy(()=>import("./Components/about"))
+// VERY IMPORTANT FOR LAZY LOADING YOU NEED THE DEFAULT IN which component we are lazy loading or it will throw an error
+const LazyAbout = React.lazy(()=>import("./Components/about"));
+const LazyContext = React.lazy(()=>import("./Hooks/Context"));
 
 
 //IMPORTANT ALL imports have to be above the const variable  ¯\_(ツ)_/¯
@@ -102,6 +106,14 @@ function App() {
           <Route path="useState" element={<StateUser/>}/>
           <Route path="useReducer" element={<Reduction/>}/>
           <Route path="useEffect" element={<Effective/>}/>
+          {/* <Route path="useContext" element={<Context/>}/>  we are so lazy ^_^*/}
+          
+          <Route path='useContext' element={
+            <React.Suspense fallback={<NoMatch/>}>
+                <LazyContext />
+            </React.Suspense>
+          }/>
+
         </Route>
         
         
