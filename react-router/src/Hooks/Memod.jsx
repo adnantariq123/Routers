@@ -29,9 +29,7 @@ export const MemoTutorial =()=>{
         return longestName;
     }
 
-    const NameChanger=(name)=>{
-        setFakeName(name)
-    }
+
 
     // useMemo is used to call a function only when it's dependency has changed
     //othetwise the function findLongestName would keep firing EVERYTIME ANY STATE CHANGED... WHICH IS WRONG

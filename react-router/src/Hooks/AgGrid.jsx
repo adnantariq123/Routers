@@ -13,10 +13,12 @@ export const DoubleAGrid=()=>{
 
     const JsonData = useContext(JsonContext)
 
+    //why use useState?
     const [columnDefs] = useState([
         { field: 'id' },
         { field: 'name' },
-        { field: 'email' }
+        { field: 'email' },
+        { field: 'body' }
     ])
 
     return (
