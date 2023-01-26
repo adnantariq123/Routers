@@ -48,7 +48,12 @@ const LazyContext = React.lazy(()=>import("./Hooks/Context"));
 
 
 
-function App() {
+const App=()=> {
+
+  React.useEffect(()=>{
+    console.log("app()")
+  },[])
+  
   return (
     <>
     <h1 className='text-3xl font-bold underline text-blue-600 bg'>what </h1>

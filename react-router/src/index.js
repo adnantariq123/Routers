@@ -10,11 +10,15 @@ import {BrowserRouter} from "react-router-dom"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  //https://stackoverflow.com/questions/60618844/react-hooks-useeffect-is-called-twice-even-if-an-empty-array-is-used-as-an-ar
+  // <React.StrictMode>
+  //   <BrowserRouter>
+  //     <App />
+  //   </BrowserRouter>
+  // </React.StrictMode>
+  <BrowserRouter>
+  <App />
+</BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

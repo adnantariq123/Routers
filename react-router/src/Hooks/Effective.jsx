@@ -18,6 +18,8 @@ export const Effective =()=>{
         console.log("Notice value of axiosData (state) was null, BECAUSE it runs BEFORE the useEffect was fired : "+axiosData)
     }, [])
 
+    console.log("Effective")
+
     return(
         <>
         <h3> use Effect added useLayoutEffect() </h3>
