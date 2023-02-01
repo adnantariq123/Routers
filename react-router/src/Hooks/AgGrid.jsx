@@ -15,10 +15,11 @@ export const DoubleAGrid=()=>{
 
     //why use useState?
     const [columnDefs] = useState([
-        { field: 'id' },
-        { field: 'name' },
-        { field: 'email' },
-        { field: 'body' }
+        // to update width of body coulumn added flex:4 property
+        { field: 'id', flex: 1 },
+        { field: 'name', flex: 1 },
+        { field: 'email', flex: 1 },
+        { field: 'body', flex: 4}
     ])
 
     return (
