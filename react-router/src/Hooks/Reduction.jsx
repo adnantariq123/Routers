@@ -1,7 +1,7 @@
 import { useReducer } from "react"
 
 export const Reduction=()=>{
-
+//test
     const initialState = {count:0, showText:true}
     
     const reducer = (state,action)=>{

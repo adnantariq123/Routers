@@ -25,6 +25,7 @@ import { Reduction } from './Hooks/Reduction';
 import { Effective } from './Hooks/Effective';
 import { MemoTutorial } from './Hooks/Memod';
 import { DoubleAGrid } from './Hooks/AgGrid';
+import { SomeTrinksQuestions } from './Components/SomeTrinksQuestions';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -62,6 +63,7 @@ const App=()=> {
     <Routes>
 
         <Route path="/" element={<Home />}></Route>
+        <Route path="SomeTrinks" element={<SomeTrinksQuestions/>}/>
 
 
 
