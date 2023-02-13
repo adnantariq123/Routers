@@ -6,6 +6,7 @@ export const StateUser=()=>{
     const myRef= useRef(null)
 
     const textChanger=(event)=>{
+        console.log(event)
         setTxt(event.target.value)
         //OR - important
         //we could have also done it like this, but for this example and we are turning it off

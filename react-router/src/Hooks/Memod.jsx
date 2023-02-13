@@ -3,7 +3,7 @@ import {JsonContext} from "./DefaultDrop"
 
 /* useMemo with useContext
 FIRSTLY THIS APP IS KINDA RETARDED, WHY? because ever render seem to show TWO console.log for any single console.log in code ¯\_(ツ)_/¯
-sooooo console.log("findLongestName Computed"); SHOULD show only once... BUT because this app is kinda retarded it shows up twice
+sooooo console.log("findLongestName Computed"); SHOULD show only once... BUT because this app is kinda retarded it shows up twice - ISSUE FIEXED! react.StrikMode was causing this
 
 THAT said useMemo is used to call a function only when it's dependency has changed
 othetwise the function findLongestName would keep firing EVERYTIME ANY STATE CHANGED... WHICH IS WRONG
