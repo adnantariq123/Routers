@@ -11,3 +11,9 @@ nav a.active {
     text-decoration: none;
     font-weight: bold;
 }
+
+.Tricky p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
