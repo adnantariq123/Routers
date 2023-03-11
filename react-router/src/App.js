@@ -16,6 +16,8 @@ import {NewProducts} from "./Components/NewProducts";
 import { Users } from './Components/Users';
 import {UserDetail} from "./Components/UserDetails"
 
+import { ReduxT } from './Components/redux';
+
 
 
 // HOOKS
@@ -57,13 +59,14 @@ const App=()=> {
   
   return (
     <>
-    <h1 className='text-3xl font-bold underline text-blue-600 bg'>what </h1>
+ 
     <NavBar/>
 
     <Routes>
 
         <Route path="/" element={<Home />}></Route>
         <Route path="SomeTrinks" element={<SomeTrinksQuestions/>}/>
+        <Route path="redux" element={<ReduxT/>}/>
 
 
 
