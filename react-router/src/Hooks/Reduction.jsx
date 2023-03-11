@@ -17,15 +17,15 @@ export const Reduction=()=>{
         }
     }
 
-    const [state, dispatchGodZilla] = useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(reducer, initialState)
 
     return (
         <>
         <h3>Use Reducer</h3>
 
-        <button onClick={()=>dispatchGodZilla({type: "INCREMENT"})}>INCREMENT</button>
-        <button onClick={()=>dispatchGodZilla({type: "DECREMENT"})}>DECREMENT</button>
-        <button onClick={()=>dispatchGodZilla({type: "TOOGLESHOWTEXT"})}>TOOGLE TEXT</button>
+        <button onClick={()=>dispatch({type: "INCREMENT"})}>INCREMENT</button>
+        <button onClick={()=>dispatch({type: "DECREMENT"})}>DECREMENT</button>
+        <button onClick={()=>dispatch({type: "TOOGLESHOWTEXT"})}>TOOGLE TEXT</button>
 
         {state.showText?
         <p> state value using useReducer : {state.count}</p>
