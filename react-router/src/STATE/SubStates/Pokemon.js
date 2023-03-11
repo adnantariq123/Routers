@@ -22,7 +22,7 @@ export const pokemonSlice = createSlice({
     PokiData: [],
     isSuccess: false,
     message: "",
-    loading: false,
+    loading: true,
   },
   reducers: {},
   extraReducers: {

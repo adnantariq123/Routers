@@ -7,13 +7,16 @@ export const ReduxT=()=>{
     const PokemonDATA= useSelector((state)=>state.Pokemon)
 
     useEffect (()=> {
-        dispatch (GetPokemon())
+        if (PokemonDATA.loading===true) {
+            dispatch (GetPokemon())
+        }
+        
     },[])
     
 
     return(
         <>
-        <select name="cars" id="cars">
+        <select>
          {
             PokemonDATA.PokiData.map((data)=>{
                 return (
