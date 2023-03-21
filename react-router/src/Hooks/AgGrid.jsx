@@ -16,18 +16,23 @@ export const DoubleAGrid=()=>{
     //why use useState?
     const [columnDefs] = useState([
         // to update width of body coulumn added flex:4 property
-        { field: 'id', headerClass :'zzzAGheaderClass', flex: 1, cellStyle:{fontWeight: 'bold',textAlign: 'center'}},
-        { field: 'name', flex: 1, cellStyle:{textAlign: 'center'}},
-        { field: 'email', flex: 1 },
-        { field: 'body', flex: 4}
+        { field: 'id', flex: 1, sortable: true, cellStyle: {textAlign: 'left'},checkboxSelection: true, headerCheckboxSelection: true, sort:'asc' },
+        { field: 'name', flex: 1, sortable: true, cellStyle: {textAlign: 'left'}},
+        { field: 'email', flex: 1, sortable: true, cellStyle: {textAlign: 'left'}},
+        { field: 'body', flex: 4, sortable: true, cellStyle: {textAlign: 'left'} }
     ])
 
     return (
         <div className="ag-theme-alpine" style={{height:500}}>
 
-            <AgGridReact rowData={JsonData} columnDefs={columnDefs}>
-                
-            </AgGridReact>
+            <AgGridReact 
+                rowData={JsonData}
+                columnDefs={columnDefs}
+                rowSelection={'multiple'}
+                suppressRowClickSelection={true}
+                pagination={true}
+                paginationPageSize={25}
+                />
         </div>
     )
 }
