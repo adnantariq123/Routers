@@ -27,6 +27,7 @@ export const Defaulted=()=>{
         <NavLink to="useContext">Use Context</NavLink>
         <NavLink to="useMemo">Use Memo</NavLink>
         <NavLink to="agGrid">Ag Grid</NavLink>
+        <NavLink to="arrays">Arrays Examples</NavLink>
 
         <JsonContext.Provider value={jsonPlaceHolderContext}>
         <Outlet/>

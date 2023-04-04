@@ -33,6 +33,7 @@ export const MemoTutorial =()=>{
 
     // useMemo is used to call a function only when it's dependency has changed
     //othetwise the function findLongestName would keep firing EVERYTIME ANY STATE CHANGED... WHICH IS WRONG
+    //const getLongestName =findLongestName(JsonData) EXAMPLE WITHOUT useMemo
     const getLongestName = useMemo(()=>findLongestName(JsonData), [JsonData])
 
     return (

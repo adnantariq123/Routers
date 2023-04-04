@@ -28,6 +28,7 @@ import { Effective } from './Hooks/Effective';
 import { MemoTutorial } from './Hooks/Memod';
 import { DoubleAGrid } from './Hooks/AgGrid';
 import { SomeTrinksQuestions } from './Components/SomeTrinksQuestions';
+import { ArrayExample } from './Hooks/Arrays';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -128,6 +129,7 @@ const App=()=> {
 
           <Route path="useMemo" element={<MemoTutorial/>}/>
           <Route path="agGrid" element={<DoubleAGrid/>}/>
+          <Route path="arrays" element={<ArrayExample/>}/>
 
         </Route>
         
