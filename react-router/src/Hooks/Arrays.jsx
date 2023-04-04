@@ -10,21 +10,16 @@ export const ArrayExample = () => {
     const CombineArrays=ArrayOne.concat(ArrayTwo)
     const uniqueArray = Array.from(new Set(CombineArrays));
 
-    const [toDo,setToDo] = useState([])
+    const RemovedDuplcaiedItems=ArrayTwo.filter((element)=>{
+        return !ArrayOne.includes(element)
+    })
 
-    useEffect (()=> {
-        axios.get("https://jsonplaceholder.typicode.com/todos")
-        .then((response)=> {
-            setToDo(response.data.slice(0,20))
-        })
-    },[])
 
-    useEffect(()=>console.log(toDo), [toDo])
 
 
     return (
         <>
-        <h3>Look at these two arrays, named ArrayOne, and ArrayTwo</h3>
+        <h4>Look at these two arrays, named ArrayOne, and ArrayTwo</h4>
         <p>Numbers: <b>1,2,3,4</b> and being duplicated or showing up in both these two different arrays</p>
 
         <p>ArrayOne:{ArrayOne.map((item) => {return (<>{item+ ", "}</>)})}</p>
@@ -32,10 +27,10 @@ export const ArrayExample = () => {
         <p>ArrayTwo:{ArrayTwo.map((item) => {return (<>{item+ ", "}</>)})}</p>
 
         <p><b>To make a new Array WITHOUT any duplciation, OR combine these two </b></p> 
-        <p>We first combine these two using .concat, which returns :</p>
+        <p>We first combine these two using <span style={{"color": "red"}}>.concat</span>, which returns :</p>
 
         <p>{CombineArrays.map((item) => {return (<>{item+ ", "}</>)})} we see duplication of the number </p>
-        <p> we use the following to REMOVE duplications <span style={{"color": "red"}}>const uniqueArray = Array.from(new Set(combineArrays));</span></p>
+        <h4> we use the following to REMOVE duplications <span style={{"color": "red"}}>const uniqueArray = Array.from(new Set(combineArrays));</span></h4>
         <p>We now have a New array with Unique values only... meaning no duplications</p>
         <p><b>uniqueArray: </b>{uniqueArray.map((item) => {return (<>{item+ ", "}</>)})}</p>
 
@@ -55,22 +50,13 @@ export const ArrayExample = () => {
             }
         </p>
 
-        <h4> Now to sort the toDo(taken from a dummy API) array of objects aganist the completed property</h4>
-            <table>
-               
-            {
-                toDo.sort((a,b)=>
-                {return b.completed - a.completed}
-                ).map((item) => {
-                    return (<tr>
-                    <td>{item.completed.toString()}</td>
-                    <td>{item.id}</td>
-                    <td>{item.title}</td>
-                    </tr>)
-                })
-            }
-             
-            </table>
+        <h4>Remove array items from another array JavaScript , we use <span style={{"color": "red"}}>.filter</span>, as well as <span style={{"color": "red"}}>!</span>array name with <span style={{"color": "red"}}>.includes</span><br/>
+        <span style={{"color": "red"}}>ArrayTwo.filter((element)=&gt;&#123;</span><br/>
+        &nbsp;&nbsp;&nbsp;<span style={{"color": "red"}}>return !ArrayOne.includes(element)</span><br/>
+        <span style={{"color": "red"}}>&#125;)</span>
+        </h4>
+        <p>Therefore remove the items found in ArrayOne from ArrayTwo {RemovedDuplcaiedItems.map((item)=>{return (<>{item+ ", "}</>)})}</p>
+
 
 
 
