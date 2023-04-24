@@ -9,3 +9,4 @@ const MemoChild=()=>{
     )
 }
 export default memo(MemoChild);
+//export default MemoChild;
