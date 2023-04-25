@@ -49,6 +49,8 @@ export const ArrayExample = () => {
                 ).map((item) => {return (<>{item+ ", "}</>)})
             }
         </p>
+        <h4>Now find the 2nd largest value in that array</h4>
+        <p> {uniqueArray.sort((a, b)=>{return b-a})[1]}</p>
 
         <h4>Remove array items from another array JavaScript , we use <span style={{"color": "red"}}>.filter</span>, as well as <span style={{"color": "red"}}>!</span>array name with <span style={{"color": "red"}}>.includes</span><br/>
         <span style={{"color": "red"}}>ArrayTwo.filter((element)=&gt;&#123;</span><br/>
