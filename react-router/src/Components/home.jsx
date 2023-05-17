@@ -12,6 +12,8 @@ export const Home=()=>{
         */}
         <button onClick={()=>Navigate("order-summary")}>Place Order</button>
 
+
+        <p> look at index.css for animation code</p>
         <div className="MyMover"></div>
     </div>)
 }
