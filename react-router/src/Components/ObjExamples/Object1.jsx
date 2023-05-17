@@ -19,7 +19,7 @@ export const ObjectOne=()=>{
         <>
             <h4>Objects, Set, and other Data Structure and algorithm look at the Console, and notice </h4>
             <ul>
-                <li>the age went missing(use delete obj.age;)</li>
+                <li>the age went missing(use <b>delete obj.age;</b>)</li>
                 <li>call the "Very wired" using obj["wired-Key-Name"] </li>
                 <li>Call the function sayMyName()</li>
             </ul>

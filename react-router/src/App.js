@@ -33,6 +33,8 @@ import {ArrayMoreExamples } from './Hooks/ArrayMoreExamples';
 import { ObjectsnStuff } from './Components/Objects';
 import { ObjectOne } from './Components/ObjExamples/Object1';
 import { ObjectTwo } from './Components/ObjExamples/ObjectTwo';
+import { ObjectThree } from './Components/ObjExamples/Object3';
+import { ObjectBinding } from './Components/ObjExamples/ObjectBind';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -58,9 +60,9 @@ const LazyContext = React.lazy(()=>import("./Hooks/Context"));
 
 const App=()=> {
 
-  React.useEffect(()=>{
-    console.log("app()")
-  },[])
+  // React.useEffect(()=>{
+  //   console.log("app()")
+  // },[])
   
   return (
     <>
@@ -142,6 +144,8 @@ const App=()=> {
         <Route path="objects" element={<ObjectsnStuff/>}>
           <Route path="object1" index element={<ObjectOne/>}/>
           <Route path="object2" element={<ObjectTwo/>}/>
+          <Route path="object3" element={<ObjectThree/>}/>
+          <Route path="objectBinding" element={<ObjectBinding/>}/>
         
         </Route>
         
