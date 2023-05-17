@@ -1,5 +1,5 @@
-export const ObjectsnStuff = () => {
-    
+export const ObjectOne=()=>{
+
     const obj = {
         name: "Adnan",
         age: "43",
@@ -27,7 +27,8 @@ export const ObjectsnStuff = () => {
                 Objects are not iterable, meaning you cannot use a for loop on it, like you ould for an array</p>
             <p>Searching and Deleting an element from a Set is faster compared to Arrays... nice to know</p>
 
-
         </>
     )
 }
+
+

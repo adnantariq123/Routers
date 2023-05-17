@@ -30,7 +30,9 @@ import { DoubleAGrid } from './Hooks/AgGrid';
 import { SomeTrinksQuestions } from './Components/SomeTrinksQuestions';
 import { ArrayExample } from './Hooks/Arrays';
 import {ArrayMoreExamples } from './Hooks/ArrayMoreExamples';
-import { ObjectsnStuff } from './Hooks/Objects';
+import { ObjectsnStuff } from './Components/Objects';
+import { ObjectOne } from './Components/ObjExamples/Object1';
+import { ObjectTwo } from './Components/ObjExamples/ObjectTwo';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -133,10 +135,15 @@ const App=()=> {
           <Route path="agGrid" element={<DoubleAGrid/>}/>
           <Route path="arrays" element={<ArrayExample/>}/>
           <Route path="arrays2" element={<ArrayMoreExamples/>}/>
-          <Route path="objects" element={<ObjectsnStuff/>}/>
+          
 
         </Route>
+
+        <Route path="objects" element={<ObjectsnStuff/>}>
+          <Route path="object1" index element={<ObjectOne/>}/>
+          <Route path="object2" element={<ObjectTwo/>}/>
         
+        </Route>
         
      
    
