@@ -32,6 +32,8 @@ export const ObjectBinding=()=>{
     printCordinate.call(c1, 'Hello'); // Hello Jon Kuperman
     printCordinate.call(c2, 'Hello'); // Hello Jon Kuperman
 
+    
+
 
     return(
         <>

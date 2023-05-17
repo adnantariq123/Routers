@@ -11,5 +11,7 @@ export const Home=()=>{
         <button onClick={()=>Navigate("order-summary", {replace:true})}>Place Order</button>
         */}
         <button onClick={()=>Navigate("order-summary")}>Place Order</button>
+
+        <div className="MyMover"></div>
     </div>)
 }
