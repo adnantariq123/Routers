@@ -11,6 +11,7 @@ export const NavBar=()=>{
             <NavLink to="/SomeTrinks">Some Tricky Questions</NavLink>
             <NavLink to="/redux">Redux</NavLink>
             <NavLink to="/objects">Objects</NavLink>
+            <NavLink to="/promise">Promise</NavLink>
         </nav>
     )
 }
