@@ -38,6 +38,9 @@ export const PedroPromise=()=>{
             catch (err) {
                 console.log("Brah got an error")
             }
+            finally {
+                console.log("came to finally")
+            }
         }
         fetchData()
     }
