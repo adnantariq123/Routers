@@ -11,7 +11,7 @@ export const ObjectOne=()=>{
     delete obj.age;
     console.log(obj)
     console.log(obj["wired-Key-Name"])
-    console.log(obj.sayMyName())
+    obj.sayMyName()
     //console.log(obj.values())
     //const set = new Set(obj)
 

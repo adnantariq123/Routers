@@ -29,6 +29,14 @@ export const ObjectTwo = () => {
     oriana.printMyAge()
     
 
+    // this will throw an error because the 'this.gender' in printGender() is technically not define
+    //Human.printGender()
+
+    // this is the correct approach
+    const AnyHuman = new Human;
+    AnyHuman.printGender()
+    
+
 
     return (
         <>
