@@ -35,7 +35,9 @@ import { ObjectOne } from './Components/ObjExamples/Object1';
 import { ObjectTwo } from './Components/ObjExamples/ObjectTwo';
 import { ObjectThree } from './Components/ObjExamples/Object3';
 import { ObjectBinding } from './Components/ObjExamples/ObjectBind';
-import { PromiseExport } from './Components/Promise';
+import { ProDrop } from './Components/Promise/PromiseDrop';
+import { PromiseExport } from './Components/Promise/Promise';
+import { PedroPromise } from './Components/Promise/PromisePedro';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -75,7 +77,10 @@ const App=()=> {
         <Route path="/" element={<Home />}></Route>
         <Route path="SomeTrinks" element={<SomeTrinksQuestions/>}/>
         <Route path="redux" element={<ReduxT/>}/>
-        <Route path='promise' element={<PromiseExport/>}/>
+        <Route path='promise' element={<ProDrop/>}>
+            <Route path='promise1' index element={<PromiseExport/>}/>
+            <Route path='promise2' element={<PedroPromise/>}/>
+        </Route>
 
 
 

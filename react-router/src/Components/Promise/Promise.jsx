@@ -5,7 +5,7 @@ export const PromiseExport=()=>{
 
     useEffect(()=>{
         GetActivity()
-        console.log("called from useEffect with an empty dependency(compoenetDidMount)")
+        console.log("called from useEffect")
     },[])
 
     const GetActivity= async()=>{
@@ -22,6 +22,11 @@ export const PromiseExport=()=>{
 
     return (
         <>
+        <h3>Promises, async/await and try catches</h3>
+        <h3>How does the event loop work in javascript?</h3>
+        <p>"JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks."</p>
+        <p>When you're doing things in js, there's basically a backlog of here's the thing that the eventQue needs to be done. These are things the evetn que needs to excute. </p>
+
         <h3>What are JS Promise</h3>
         <p>The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
         <p>A Promise is in one of these states:</p>
