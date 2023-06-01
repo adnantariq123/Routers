@@ -32,6 +32,21 @@ export const ObjectBinding=()=>{
     printCordinate.call(c1, 'Hello'); // Hello Jon Kuperman
     printCordinate.call(c2, 'Hello'); // Hello Jon Kuperman
 
+
+
+    function doMaths() {
+        console.log(this.a+this.b)
+    }
+
+    const v1 ={a:1, b:2}
+    const v2 ={a:11, b:22}
+    const v3 ={a:55, b:12}
+
+
+    // look how simple it was to add the functionality to reach of these objects
+    doMaths.call(v1)
+    doMaths.call(v2)
+    doMaths.call(v3)
     
 
 
