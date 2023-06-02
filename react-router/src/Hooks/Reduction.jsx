@@ -10,6 +10,8 @@ export const Reduction=()=>{
                 return {...state, count: state.count + 1}
             case "DECREMENT":
                 return {...state, count: state.count - 1}
+            case "BYTEN":
+                return {...state, count: state.count +10}
             case "TOOGLESHOWTEXT":
                 return {...state, showText: !state.showText}
             default :
@@ -25,6 +27,7 @@ export const Reduction=()=>{
 
         <button onClick={()=>dispatch({type: "INCREMENT"})}>INCREMENT</button>
         <button onClick={()=>dispatch({type: "DECREMENT"})}>DECREMENT</button>
+        <button onClick={()=>dispatch({type:"BYTEN"})}>By Ten</button>
         <button onClick={()=>dispatch({type: "TOOGLESHOWTEXT"})}>TOOGLE TEXT</button>
 
         {state.showText?
