@@ -18,7 +18,9 @@ export const Home=()=>{
         <h4>Is the Shadow DOM the same as the Virtual DOM?</h4>
         <p>No, they are different. The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.</p>
 
-
+        <h4>what is event looping</h4>
+        <p>JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.</p>
+        
         <h4>Which js engine is used by google chrome?</h4>
         <p>V8 is the name of the JavaScript engine that powers Google Chrome. It's the thing that takes our JavaScript and executes it while browsing with Chrome. V8 provides the runtime environment in which JavaScript executes. The DOM and the other Web Platform APIs are provided by the browser.</p>
         <p>The biggest difference is in compilation. <b>SpiderMonkey</b>(Mozilla) compiles JavaScript to an intermediate language which is interpreted. V8 differs by compiling JavaScript to machine instructions, eliminating a need for an interpreter. During compilation and recompilation, they perform many optimizations.</p>
