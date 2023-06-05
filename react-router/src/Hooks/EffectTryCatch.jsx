@@ -5,6 +5,8 @@ import { useState, useEffect } from "react"
 
 export const EffectTryCatch = () => {
     const [users, setUsers] = useState(null)
+    const [loading, setLoading] = useState(true)
+    const [hasError, setHasError] = useState(false)
 
 
 
@@ -13,15 +15,21 @@ export const EffectTryCatch = () => {
     }, [])
 
     const callingAPI = async () => {
-        try {
-            const data = await fetch('https://jsonplaceholder.typicode.com/users');
-            const response = await data.json();
-            setUsers(response)
-        }
-        catch (error) {
-            console.log("something went wrong!")
-            console.log(error)
-        }
+        // I am forcing a 3 second delay
+        setTimeout( async() => {
+            try {
+                const data = await fetch('https://jsonplaceholder.typicode.com/users');
+                const response = await data.json();
+                setLoading(false)
+                setUsers(response)
+            }
+            catch (error) {
+                console.log("something went wrong!")
+                console.log(error)
+                setLoading(false)
+                setHasError(true)
+            }
+        }, 2000)
     }
 
     useEffect(() => console.log(users), [users])
@@ -29,11 +37,18 @@ export const EffectTryCatch = () => {
 
     return (
         <>
-            {users?.map((user, i) => {
+            {loading && hasError===false ? <h3>loading...</h3>
+            :
+            users?.map((user, i) => {
                 return (
                     <p key={i}>{user.name}</p>
                 )
-            })}
+            })
+            }
+            {hasError? <h3> Came to error block!</h3>:<></>}
+            
+            
+            
         </>
     )
 
