@@ -24,6 +24,7 @@ export const Defaulted=()=>{
         <NavLink to="useState">Use da State and UseRef</NavLink>
         <NavLink to="useReducer">Use Reducer</NavLink>
         <NavLink to="useEffect">Use Effect</NavLink>
+        <NavLink to="EffectTryCatch">Effect Try Catch</NavLink>
         <NavLink to="useContext">Use Context</NavLink>
         <NavLink to="useMemo">Use Memo</NavLink>
         <NavLink to="agGrid">Ag Grid</NavLink>

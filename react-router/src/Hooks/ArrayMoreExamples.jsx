@@ -22,8 +22,8 @@ export const ArrayMoreExamples =()=>{
             {
                 toDo.sort((a,b)=>
                 {return b.completed - a.completed}
-                ).map((item) => {
-                    return (<tr>
+                ).map((item,i) => {
+                    return (<tr key={i}>
                     <td>{item.completed.toString()}</td>
                     <td>{item.id}</td>
                     <td>{item.title}</td>

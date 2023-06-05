@@ -38,6 +38,8 @@ import { ObjectBinding } from './Components/ObjExamples/ObjectBind';
 import { ProDrop } from './Components/Promise/PromiseDrop';
 import { PromiseExport } from './Components/Promise/Promise';
 import { PedroPromise } from './Components/Promise/PromisePedro';
+import { Pro3 } from './Components/Promise/Promise3';
+import { EffectTryCatch } from './Hooks/EffectTryCatch';
 
 // But we are too darn lazy ^,^
 //import { Context } from './Hooks/Context';
@@ -80,6 +82,7 @@ const App=()=> {
         <Route path='promise' element={<ProDrop/>}>
             <Route path='promise1' index element={<PromiseExport/>}/>
             <Route path='promise2' element={<PedroPromise/>}/>
+            <Route path='promise3' element={<Pro3/>}/>
         </Route>
 
 
@@ -132,6 +135,7 @@ const App=()=> {
           <Route path="useState" element={<StateUser/>}/>
           <Route path="useReducer" element={<Reduction/>}/>
           <Route path="useEffect" element={<Effective/>}/>
+          <Route path="EffectTryCatch" element={<EffectTryCatch/>}/>
           {/* <Route path="useContext" element={<Context/>}/>  we are so lazy ^_^*/}
           
           <Route path='useContext' element={

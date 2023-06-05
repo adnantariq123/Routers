@@ -12,6 +12,10 @@ export const Home=()=>{
         */}
         <button onClick={()=>Navigate("order-summary")}>Place Order</button>
 
+        <h3>What are Web Packs?</h3>
+        <p>Webpack is a static module bundler for JavaScript applications — it takes all the code from your application and makes it usable in a web browser. Modules are reusable chunks of code built from your app’s JavaScript, node_modules, images, and the CSS styles which are packaged to be easily used in your website. </p>
+        <p>Webpack is a free and open-source module bundler for JavaScript. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. Webpack takes modules with dependencies and generates static assets representing those modules. </p>
+
         <h3>What is the Virtual DOM?</h3>
         <p>The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.</p>
 
@@ -31,6 +35,9 @@ export const Home=()=>{
 
         <h4>What is flux concept in ReactJS?</h4>
         <p>Flux is a programming concept, where the data is uni-directional. This data enters the app and flows through it in one direction until it is rendered on the screen.</p>
+
+        <h4>What is cross site scripting?</h4>
+        <p>Cross-site scripting (also known as XSS) is a web security vulnerability that allows an attacker to compromise the interactions that users have with a vulnerable application. It allows an attacker to circumvent the same origin policy, which is designed to segregate different websites from each other.</p>
 
         <div className="MyMover"></div>
     </div>)
