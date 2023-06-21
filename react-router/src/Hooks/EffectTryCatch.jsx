@@ -50,11 +50,11 @@ export const EffectTryCatch = () => {
 
     }
 
-    function findArrayElementByTitle(array, title) {
-        return array.find((element) => {
-          return element.name === title;
-        })
-      }
+    const ResetBtnClicked =()=>{
+        setShowUsers(users)
+    }
+    
+
 
 
 
@@ -79,6 +79,7 @@ export const EffectTryCatch = () => {
             <span className="side">
                 <input value={inputTxt} onChange={ChangeTxt}/>
                 <button onClick={btnClicked}>Find user</button>
+                <button onClick={ResetBtnClicked}>Reset user</button>
             </span>
 
             </>}
