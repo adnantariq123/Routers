@@ -18,6 +18,7 @@ export const EffectTryCatch = () => {
 
     const callingAPI= async ()=>{
 
+        // setTimeout was to simply add a delay
         setTimeout (async()=>{
             try {
                 const data = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -43,15 +44,8 @@ export const EffectTryCatch = () => {
     const btnClicked =()=>{
         console.log(inputTxt)
         console.log(users)
-        // const data = users.filter((user)=>{
-        //     if (user.name==="Ervin") {
-        //         return user
-        //     }
-        // })
-        // let magenicVendors = users?.filter( user => user.name === "Ervin" )
-        // console.log(magenicVendors)
-        //setShowUsers(data)
-        const data = findArrayElementByTitle(users,inputTxt )
+        const data = users?.filter((user)=>user.name===inputTxt)
+        setShowUsers(data)
         console.log(data)
 
     }
