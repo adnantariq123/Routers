@@ -32,7 +32,7 @@ export const EffectTryCatch = () => {
                 console.log(error)
     
             }
-        }, 3000)
+        }, 1000)
 
     }
 
@@ -54,6 +54,18 @@ export const EffectTryCatch = () => {
         setShowUsers(users)
     }
     
+    const SortName =()=>{
+        const sortedData = [...showUsers]
+
+        sortedData.sort(function(a, b) {
+            var textA = a.name.toUpperCase();
+            var textB = b.name.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        console.log(sortedData)
+
+        setShowUsers(sortedData)
+    }
 
 
 
@@ -80,6 +92,7 @@ export const EffectTryCatch = () => {
                 <input value={inputTxt} onChange={ChangeTxt}/>
                 <button onClick={btnClicked}>Find user</button>
                 <button onClick={ResetBtnClicked}>Reset user</button>
+                <button onClick={SortName}>Sort by name</button>
             </span>
 
             </>}
